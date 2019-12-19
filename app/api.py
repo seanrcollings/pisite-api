@@ -6,7 +6,7 @@ api = Blueprint('api', __name__, url_prefix='/api')
 
 @api.route('/')
 def home():
-    return '/stats - returns a list of all stats'
+    return "/stats - returns a list of all stats \n /stats/<id> - returns a specific stat's info"
 
 @api.route('/stats')
 def stats():
