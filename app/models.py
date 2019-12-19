@@ -3,7 +3,7 @@ import subprocess
 
 
 #pylint: disable=no-member
-class Command(db.Model):
+class Stat(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64))
     command = db.Column(db.String(128))

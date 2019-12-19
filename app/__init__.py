@@ -8,7 +8,7 @@ import sys
 db = SQLAlchemy()
 migrate = Migrate()
 
-from app.models import Command
+from app.models import Stat
 from app.api import api
 
 
@@ -22,7 +22,8 @@ def create_app(config=DevConfig):
     app.register_blueprint(api)
 
     @app.shell_context_processor
+    #pyling: igonre=unused-variables
     def make_shell_context():
-        return {'db': db, 'Command': Command}
+        return {'db': db, 'Stat': Stat}
 
     return app
