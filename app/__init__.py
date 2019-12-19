@@ -21,8 +21,8 @@ def create_app(config=DevConfig):
     migrate.init_app(app, db)
     app.register_blueprint(api)
 
+    #pylint: disable=unused-variable
     @app.shell_context_processor
-    #pyling: igonre=unused-variables
     def make_shell_context():
         return {'db': db, 'Stat': Stat}
 
