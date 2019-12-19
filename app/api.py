@@ -6,7 +6,7 @@ api = Blueprint('api', __name__, url_prefix='/api')
 
 @api.route('/')
 def home():
-    return 'hello there'
+    return 'This is the base route for the API, return documentation at some point'
 
 @api.route('/stats')
 def stats():
