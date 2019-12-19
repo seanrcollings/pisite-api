@@ -1,0 +1,26 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DatabaseRecord	../models/databaseRecord.py	/^class DatabaseRecord:$/;"	kind:class	line:4
+Stat	../models/stat.py	/^class Stat(DatabaseRecord):$/;"	kind:class	line:4
+__init__.py	../app/__init__.py	1;"	kind:file	line:1
+__init__.py	../models/__init__.py	1;"	kind:file	line:1
+add_stats	../database/databaseCreation.py	/^def add_stats(): # Adds the initial stats to the database | possibly integrate into the DatabaseRecord model?$/;"	kind:function	line:31
+app	../app/__init__.py	/^app = Flask(__name__, static_url_path='\/')$/;"	kind:variable	line:8
+catch_all	../app/__init__.py	/^def catch_all(path):$/;"	kind:function	line:14
+create_db	../database/databaseCreation.py	/^def create_db():$/;"	kind:function	line:11
+data	../app/__init__.py	/^def data():$/;"	kind:function	line:23
+databaseCreation.py	../database/databaseCreation.py	1;"	kind:file	line:1
+databaseRecord.py	../models/databaseRecord.py	1;"	kind:file	line:1
+drop_table	../database/databaseCreation.py	/^def drop_table():$/;"	kind:function	line:4
+fetch_all	../models/databaseRecord.py	/^    def fetch_all(cls):$/;"	kind:member	line:7
+fetch_data	../models/stat.py	/^    def fetch_data(self):$/;"	kind:member	line:11
+mastermind	../app/__init__.py	/^def mastermind():$/;"	kind:function	line:19
+migrate	../database/migrate.py	/^def migrate():$/;"	kind:function	line:5
+migrate.py	../database/migrate.py	1;"	kind:file	line:1
+stat.py	../models/stat.py	1;"	kind:file	line:1
+table_name	../models/databaseRecord.py	/^    def table_name(cls):$/;"	kind:member	line:23
+table_name	../models/stat.py	/^    def table_name(cls):$/;"	kind:member	line:7

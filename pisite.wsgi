@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append('/var/www/pisite/pisiteprod')
+sys.path.append('/var/www/pisite')
 
-from pisite import app as application
+from app import app as application
 
