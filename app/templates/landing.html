@@ -1,15 +1,14 @@
-{% extends 'base.html' %} {% block content %}
-{% block styles %}
-    <style>
-        .content a {
-            color: #4588F9;
-            text-decoration: none;
-        }
+{% extends 'base.html' %} {% block content %} {% block styles %}
+<style>
+  .content a {
+    color: #4588f9;
+    text-decoration: none;
+  }
 
-        .content a:hover {
-            color: black
-        }
-    </style>
+  .content a:hover {
+    color: black;
+  }
+</style>
 {% endblock styles %}
 <h2>Documentation</h2>
 <a href="/docs">Click Here to go to the documentation</a>
@@ -31,9 +30,17 @@
 </p>
 <h2>Technologies Used</h2>
 <ul>
-    <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask Micro-Framework</a></li>
-    <li><a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/">SQL-Alchemy ORM</a></li>
-    <li><a href="https://www.sqlite.org/index.html">SQLite</a></li>
-    <li><a href="https://www.nginx.com/">Nginx</a></li>
+  <li>
+    <a href="https://flask.palletsprojects.com/en/1.1.x/"
+      >Flask Micro-Framework</a
+    >
+  </li>
+  <li>
+    <a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/"
+      >SQL-Alchemy ORM</a
+    >
+  </li>
+  <li><a href="https://www.sqlite.org/index.html">SQLite</a></li>
+  <li><a href="https://www.nginx.com/">Nginx</a></li>
 </ul>
 {% endblock content %}

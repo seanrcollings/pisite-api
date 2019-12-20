@@ -1,107 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" href="/static/logo.png" />
     <title>Pi Site API</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            width: 700px;
-            margin: auto;
-            background-color: #F2F2F2;
-            color: #333
-        }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 700px;
+        margin: auto;
+        background-color: #f2f2f2;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
 
-        header {
-            width: 100%;
-            height: 100px;
-            display: block;
-            background-color: #4588F9;
-            color: white;
-            display: flex;
-            align-content: center;
-            position: relative;
-        }
+      header {
+        flex: 0 1 100px;
+        display: block;
+        background-color: #4588f9;
+        color: white;
+        display: flex;
+        align-content: center;
+        position: relative;
+      }
 
-        header img {
-            width: 90px;
-            margin: 5px
-        }
+      header img {
+        width: 90px;
+        margin: 5px;
+      }
 
-        header h1 {
-            font-size: 40px;
-            margin: 0px;
-            line-height: 100px;
-        }
+      header h1 {
+        font-size: 40px;
+        margin: 0px;
+        line-height: 100px;
+      }
 
-        .content {
-            background-color: white;
-            padding: 10px;
-            padding-bottom: 20px;
-        }
+      .content {
+        flex: 1 1 auto;
+        background-color: white;
+        padding: 10px;
+        padding-bottom: 20px;
+      }
 
-        .content h2 {
-            color: rgb(83, 83, 83)
-        }
+      .content h2 {
+        color: rgb(83, 83, 83);
+      }
 
-        footer {
-            width: 100%;
-            height: 100px;
-            display: block;
-            background-color: #4588F9;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            font-size: 20px;
-        }
+      footer {
+        flex: 0 1 100px;
+        display: block;
+        background-color: #4588f9;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 20px;
+      }
 
-        span:nth-child(even) {
-            font-size: 40px;
-        }
-        
-        footer a, header a, code a{
-            text-decoration: none ;
-            color: white 
-        }
+      span:nth-child(even) {
+        font-size: 40px;
+      }
 
-        footer a:hover, header a:hover, code a:hover {
-            text-decoration: underline ;
-            color: rgb(221, 221, 221)
-        }
+      footer a,
+      header a,
+      code a {
+        text-decoration: none;
+        color: white;
+      }
 
-        .name{
-            position: absolute;
-            font-size: 15px !important;
-            bottom: 5px;
-            right: 5px;
-        }
+      footer a:hover,
+      header a:hover,
+      code a:hover {
+        text-decoration: underline;
+        color: rgb(221, 221, 221);
+      }
 
+      .name {
+        position: absolute;
+        font-size: 15px !important;
+        bottom: 5px;
+        right: 5px;
+      }
     </style>
-    {% block styles %}
-    
-    {% endblock styles %}
-</head>
-<body>
+    {% block styles %} {% endblock styles %}
+  </head>
+  <body>
     <header>
-        <img src="/static/logo.png">
-        <h1><a href='/'>Pi Site API</a></h1>
-        <span class='name'>Created By Sean Collings</span>
+      <img src="/static/logo.png" />
+      <h1><a href="/">Pi Site API</a></h1>
+      <span class="name">Created By Sean Collings</span>
     </header>
-    <div class='content'>
-        {% block content %}
-        
-        {% endblock content %}
+    <div class="content">
+      {% block content %} {% endblock content %}
     </div>
     <footer>
-        <span><a href='http://pisite.seanrcollings.com'>The Pi Site</a></span>
-        <span>•</span>
-        <span><a href='https://seanrcollings.com'>My Website</a></span>
-        <span>•</span>
-        <span><a href='https://github.com/seanrcollings/pisite-api'>Source Code</a></span>
+      <span><a href="http://pisite.seanrcollings.com">The Pi Site</a></span>
+      <span>•</span>
+      <span><a href="https://seanrcollings.com">My Website</a></span>
+      <span>•</span>
+      <span
+        ><a href="https://github.com/seanrcollings/pisite-api"
+          >Source Code</a
+        ></span
+      >
     </footer>
-</body>
+  </body>
 </html>
