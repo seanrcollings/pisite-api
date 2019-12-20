@@ -3,9 +3,12 @@ from app.models import Stat
 from app import db
 api = Blueprint('api', __name__)
 
-
+@api.route('/')
+def root():
+    return "Pi Site API"
+    
 @api.route('/docs')
-def home():
+def docs():
     return render_template('docs.html')
 
 @api.route('/stats')
