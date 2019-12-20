@@ -1,12 +1,12 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, render_template
 from app.models import Stat
 from app import db
 api = Blueprint('api', __name__)
 
 
-@api.route('/')
+@api.route('/docs')
 def home():
-    return "/stats - returns a list of all stats \n /stats/<id> - returns a specific stat's info"
+    return render_template('docs.html')
 
 @api.route('/stats')
 def stats():
