@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% block content %}
+{% block styles %}
+    <style>
+        .content a {
+            color: #4588F9;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            color: black
+        }
+    </style>
+{% endblock styles %}
+<h2>Documentation</h2>
+<a href="/docs">Click Here to go to the documentation</a>
+<h2>Background</h2>
+<p>
+  This is an API (obviously) that I wrote to interact with my Raspberry Pi 3 B.
+  It currently just exposes various stats about the system. I hope to add more
+  information in the future. I also hope to add other fun functionality in the
+  future.
+</p>
+<p>
+  This project was initally built for a
+  <a href="https://www.ctsutah.com/">summer web development boot camp</a> that I
+  attended in the summer of 2018. Since then it has been greatly expanded upon
+  (You can just check the commit history for proof of that!). Initally the the
+  Raspberry Pi also served the website itself. But now the Pi has just been
+  converted into a resource API (and docs repository), while site is served
+  somewhere else.
+</p>
+<h2>Technologies Used</h2>
+<ul>
+    <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask Micro-Framework</a></li>
+    <li><a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/">SQL-Alchemy ORM</a></li>
+    <li><a href="https://www.sqlite.org/index.html">SQLite</a></li>
+    <li><a href="https://www.nginx.com/">Nginx</a></li>
+</ul>
+{% endblock content %}

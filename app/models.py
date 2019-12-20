@@ -22,6 +22,6 @@ class Stat(db.Model):
         try:
             data = subprocess.check_output(self.command,
                                            shell=True).strip().decode('utf-8')
-        except:
-            data = "Data Fetch Failed :("
+        except Exception as e:
+            data = f"Exception: {e}"
         return data

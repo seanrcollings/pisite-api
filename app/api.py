@@ -5,7 +5,7 @@ api = Blueprint('api', __name__)
 
 @api.route('/')
 def root():
-    return "Pi Site API"
+    return render_template('landing.html')
     
 @api.route('/docs')
 def docs():

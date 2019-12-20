@@ -1,16 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pi Site API Documentation</title>
-</head>
-<body>
-    <div style='width:600px;margin:auto'>
-    <p>/stats - returns a list of all stats</p> 
-    <p>/stats/id - returns a specific stat's info</p>
-    <p>/stats/id/data - returns the data from running the specific command</p>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %} {% block styles %}
+<style>
+  div {
+    padding-left: 10px;
+  }
+  pre {
+    background-color: #333;
+    overflow: hidden;
+  }
+  code {
+    background-color: #333;
+    padding: 8px;
+    margin-bottom: 10px;
+    height: 200px;
+  }
+
+  h2 {
+    margin-left: -10px;
+    color: #75aa28 !important;
+  }
+
+  h2 span {
+    color: rgb(83, 83, 83);
+    font-weight: normal;
+  }
+</style>
+{% endblock styles %} {% block content %}
+<div>
+  <h2>GET <span>/stats</span></h2>
+  <p>Returns a list of all the stat objects present in the database</p>
+  <code>
+    <a href='http://api.pisite.searncollings.com/stats'>http://api.pisite.searncollings.com/stats</a>
+  </code>
+ 
+</div>
+<div>
+  <h2>GET <span>/stats/:id</span></h2>
+  <p>Returns a specific stat's info</p>
+  <code>
+    <a href='http://api.pisite.searncollings.com/stats/1'>http://api.pisite.searncollings.com/stats/1</a>
+  </code>
+</div>
+<div>
+  <h2>GET <span>/stats/:id/data</span></h2>
+  <p>
+    Runs the command that is associated with that stat, then returns the result
+  </p>
+  <code>
+    <a href='http://api.pisite.searncollings.com/stats/1/data'>http://api.pisite.searncollings.com/stats/1/data</a>
+  </code>
+</div>
+{% endblock content %}
