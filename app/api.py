@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify
 from app.models import Stat
 from app import db
-api = Blueprint('api', __name__, url_prefix='/api')
+api = Blueprint('api', __name__)
 
 
 @api.route('/')
