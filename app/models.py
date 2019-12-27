@@ -20,8 +20,7 @@ class Stat(db.Model):
 
     def execute_command(self):
         try:
-            data = subprocess.check_output(self.command,
-                                           shell=True).strip().decode('utf-8')
+            data = subprocess.check_output(self.command, shell=True).strip().decode('utf-8')
         except Exception as e:
             data = f"Exception: {e}"
         return data
