@@ -2,27 +2,11 @@ from flask import Blueprint, jsonify, render_template
 from app.models import Stat
 from app import db
 api = Blueprint('api', __name__)
-from app.models import Stat
-commands = [
-    '/bin/date +"%I:%M %p"',
-    '/bin/date +\\%d/\\%m/\\%Y',
-    "/usr/bin/uptime | /bin/grep -o '...., ...., ....'",
-    "/usr/bin/uptime | /bin/grep -o '..users'",
-    "/bin/df -h --total | /bin/grep total | /bin/grep -o '..%'",
-    "/bin/ps -Ao pid --sort=-pcpu | /usr/bin/head -n 2 | /usr/bin/tr -dc '0-9'",
-    "/bin/ps -Ao pid --sort=-pcpu | /usr/bin/head -n 2 | /usr/bin/tr -dc '0-9'",
-    "/bin/ps -o pmem --sort=-pmem | /usr/bin/head -n 2 | /usr/bin/tr -dc '0-9'",
-    "/usr/bin/du -hs /var/www/pisite | /bin/grep -o '..M'",
-]
+
 
 
 @api.route('/')
 def root():
-    stats = Stat.query.all()
-    for index, stat in enumerate(stats):
-        stat.command = commands[index]
-        db.session.add(stat)
-    db.session.commit()
     return render_template('landing.html')
 
 
