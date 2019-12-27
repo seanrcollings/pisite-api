@@ -4,23 +4,59 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-DatabaseRecord	../models/databaseRecord.py	/^class DatabaseRecord:$/;"	kind:class	line:4
-Stat	../models/stat.py	/^class Stat(DatabaseRecord):$/;"	kind:class	line:4
+48a4296ec915_.py	../migrations/versions/48a4296ec915_.py	1;"	kind:file	line:1
+BASE_URL	../app/config.py	/^    BASE_URL = 'http:\/\/localhost:5000'$/;"	kind:variable	line:16
+Config	../app/config.py	/^class Config():$/;"	kind:class	line:7
+DEBUG	../app/config.py	/^    DEBUG = False/;"	kind:variable	line:20
+DEBUG	../app/config.py	/^    DEBUG = True$/;"	kind:variable	line:15
+DevConfig	../app/config.py	/^class DevConfig(Config):$/;"	kind:class	line:13
+ENV	../app/config.py	/^    ENV = 'development'$/;"	kind:variable	line:14
+ENV	../app/config.py	/^    ENV = 'production'$/;"	kind:variable	line:19
+ProdConfig	../app/config.py	/^class ProdConfig(Config):$/;"	kind:class	line:18
+SECRET_KEY	../app/config.py	/^    SECRET_KEY = 'you-will-never-guess'$/;"	kind:variable	line:10
+SQLALCHEMY_DATABASE_URI	../app/config.py	/^    SQLALCHEMY_DATABASE_URI = 'sqlite:\/\/\/' + os.path.join(basedir, 'app.db')$/;"	kind:variable	line:8
+SQLALCHEMY_TRACK_MODIFICATIONS	../app/config.py	/^    SQLALCHEMY_TRACK_MODIFICATIONS = False$/;"	kind:variable	line:9
+Stat	../app/models.py	/^class Stat(db.Model):$/;"	kind:class	line:6
 __init__.py	../app/__init__.py	1;"	kind:file	line:1
-__init__.py	../models/__init__.py	1;"	kind:file	line:1
-add_stats	../database/databaseCreation.py	/^def add_stats(): # Adds the initial stats to the database | possibly integrate into the DatabaseRecord model?$/;"	kind:function	line:31
-app	../app/__init__.py	/^app = Flask(__name__, static_url_path='\/')$/;"	kind:variable	line:8
-catch_all	../app/__init__.py	/^def catch_all(path):$/;"	kind:function	line:14
-create_db	../database/databaseCreation.py	/^def create_db():$/;"	kind:function	line:11
-data	../app/__init__.py	/^def data():$/;"	kind:function	line:23
-databaseCreation.py	../database/databaseCreation.py	1;"	kind:file	line:1
-databaseRecord.py	../models/databaseRecord.py	1;"	kind:file	line:1
-drop_table	../database/databaseCreation.py	/^def drop_table():$/;"	kind:function	line:4
-fetch_all	../models/databaseRecord.py	/^    def fetch_all(cls):$/;"	kind:member	line:7
-fetch_data	../models/stat.py	/^    def fetch_data(self):$/;"	kind:member	line:11
-mastermind	../app/__init__.py	/^def mastermind():$/;"	kind:function	line:19
-migrate	../database/migrate.py	/^def migrate():$/;"	kind:function	line:5
-migrate.py	../database/migrate.py	1;"	kind:file	line:1
-stat.py	../models/stat.py	1;"	kind:file	line:1
-table_name	../models/databaseRecord.py	/^    def table_name(cls):$/;"	kind:member	line:23
-table_name	../models/stat.py	/^    def table_name(cls):$/;"	kind:member	line:7
+api	../app/api.py	/^api = Blueprint('api', __name__)$/;"	kind:variable	line:4
+api.py	../app/api.py	1;"	kind:file	line:1
+app	../pisite.py	/^app = create_app()$/;"	kind:variable	line:3
+basedir	../app/config.py	/^basedir = os.path.abspath(os.path.dirname(__file__))$/;"	kind:variable	line:4
+branch_labels	../migrations/versions/48a4296ec915_.py	/^branch_labels = None$/;"	kind:variable	line:15
+branch_labels	../migrations/versions/d3fc91b45b6a_renamed_command_to_stat.py	/^branch_labels = None$/;"	kind:variable	line:15
+command	../app/models.py	/^    command = db.Column(db.String(128))$/;"	kind:variable	line:9
+config	../migrations/env.py	/^config = context.config$/;"	kind:variable	line:13
+config.py	../app/config.py	1;"	kind:file	line:1
+create_app	../app/__init__.py	/^def create_app(config=DevConfig):$/;"	kind:function	line:15
+d3fc91b45b6a_renamed_command_to_stat.py	../migrations/versions/d3fc91b45b6a_renamed_command_to_stat.py	1;"	kind:file	line:1
+data	../app/api.py	/^def data(_id):$/;"	kind:function	line:25
+db	../app/__init__.py	/^db = SQLAlchemy()$/;"	kind:variable	line:8
+depends_on	../migrations/versions/48a4296ec915_.py	/^depends_on = None$/;"	kind:variable	line:16
+depends_on	../migrations/versions/d3fc91b45b6a_renamed_command_to_stat.py	/^depends_on = None$/;"	kind:variable	line:16
+description	../app/models.py	/^    description = db.Column(db.Text())$/;"	kind:variable	line:10
+docs	../app/api.py	/^def docs():$/;"	kind:function	line:11
+down_revision	../migrations/versions/48a4296ec915_.py	/^down_revision = None$/;"	kind:variable	line:14
+down_revision	../migrations/versions/d3fc91b45b6a_renamed_command_to_stat.py	/^down_revision = '48a4296ec915'$/;"	kind:variable	line:14
+downgrade	../migrations/versions/48a4296ec915_.py	/^def downgrade():$/;"	kind:function	line:31
+downgrade	../migrations/versions/d3fc91b45b6a_renamed_command_to_stat.py	/^def downgrade():$/;"	kind:function	line:32
+env.py	../migrations/env.py	1;"	kind:file	line:1
+execute_command	../app/models.py	/^    def execute_command(self):$/;"	kind:member	line:21
+id	../app/models.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	kind:variable	line:7
+logger	../migrations/env.py	/^logger = logging.getLogger('alembic.env')$/;"	kind:variable	line:18
+make_shell_context	../app/__init__.py	/^    def make_shell_context():$/;"	kind:function	line:26
+migrate	../app/__init__.py	/^migrate = Migrate()$/;"	kind:variable	line:9
+models.py	../app/models.py	1;"	kind:file	line:1
+name	../app/models.py	/^    name = db.Column(db.String(64))$/;"	kind:variable	line:8
+pisite.py	../pisite.py	1;"	kind:file	line:1
+process_revision_directives	../migrations/env.py	/^    def process_revision_directives(context, revision, directives):$/;"	kind:function	line:68
+revision	../migrations/versions/48a4296ec915_.py	/^revision = '48a4296ec915'$/;"	kind:variable	line:13
+revision	../migrations/versions/d3fc91b45b6a_renamed_command_to_stat.py	/^revision = 'd3fc91b45b6a'$/;"	kind:variable	line:13
+root	../app/api.py	/^def root():$/;"	kind:function	line:7
+run_migrations_offline	../migrations/env.py	/^def run_migrations_offline():$/;"	kind:function	line:36
+run_migrations_online	../migrations/env.py	/^def run_migrations_online():$/;"	kind:function	line:57
+serialize	../app/models.py	/^    def serialize(self):$/;"	kind:member	line:13
+show	../app/api.py	/^def show(_id):$/;"	kind:function	line:20
+stats	../app/api.py	/^def stats():$/;"	kind:function	line:15
+target_metadata	../migrations/env.py	/^target_metadata = current_app.extensions['migrate'].db.metadata$/;"	kind:variable	line:28
+upgrade	../migrations/versions/48a4296ec915_.py	/^def upgrade():$/;"	kind:function	line:19
+upgrade	../migrations/versions/d3fc91b45b6a_renamed_command_to_stat.py	/^def upgrade():$/;"	kind:function	line:19
